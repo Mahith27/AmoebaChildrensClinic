@@ -1,50 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Amoeba Children's Hospital</title>
     <style>
-        body {
-            background-image: url('bgd.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
+        .header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            height: 60%;
         }
-        .highlight {
-            font-size: 2em;
-            color: #FF6347; /* You can change this to any color you like */
+        .logo {
+            float: left;
+            height: 100px;
         }
-        .doctor {
+        .contact {
+            float: right;
+            font-size: small;
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+        }
+        .contact p {
             display: flex;
             align-items: center;
+        }
+        .contact img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+        .nav {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .mission {
+            padding: 20px;
+            text-align: center;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .info div {
+            width: 45%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        }
+        .info h3 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .timetable th, .timetable td {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: left;
+        }
+        .timetable th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .services {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
+        .doctor {
+            clear: both;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
         }
         .doctor img {
             width: 100px;
             height: 100px;
-            border-radius: 50%;
-            margin-right: 10px;
+        }
+        .doctor div {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1 class="highlight">Amoeba Children's Hospital</h1>
-        <img src="bgd.jpg" alt="Amoeba Logo">
-    </header>
-    <main>
-        <section class="doctor">
-            <img src="image.png" alt="Dr. Tharu Tej">
+    <div class="header">
+        <img class="logo" src="Amoeba.jpg" alt="Clinic Logo">
+        <div class="contact">
+            <p><img src="mobile.jpg" alt="Phone Icon"> PHONE_NUMBER</p>
+            <p><img src="gmail.jpg" alt="Email Icon"> EMAIL_ADDRESS</p>
+            <p><img src="gmail.jpg" alt="Location Icon"> <a href="https://g.co/kgs/V5ffsba">LOCATION</a></p>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#mission">Mission</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#gallery">Gallery</a>
+    </div>
+    <div id="mission" class="mission">
+        <h2>Our Mission</h2>
+        <p class="highlight">At Amoeba Children's Clinic, our mission is to provide the best healthcare services for children, ensuring a healthy and happy childhood for them. We are dedicated to the comprehensive health of your child and to the belief that all children are special. Our goal is to ensure that your child's health is the best it can be.</p>
+        <div class="info">
             <div>
-                <h2>Dr. Tharu Tej</h2>
-                <p>Details about Dr. Tharu Tej...</p>
+                <h3>Timings</h3>
+                <table class="timetable">
+                    <tr>
+                        <th>Day</th>
+                        <th>Timings</th>
+                    </tr>
+                    <tr>
+                        <td>Monday to Saturday</td>
+                        <td>9am to 1pm, 5pm to 9pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>11am to 1pm</td>
+                    </tr>
+                </table>
             </div>
-        </section>
-        <section class="doctor">
-            <img src="bgd.jpg" alt="Dr. Aishwarya">
             <div>
-                <h2>Dr. Aishwarya</h2>
-                <p>Details about Dr. Aishwarya...</p>
+                <h3>Services Offered</h3>
+                <ul class="services">
+                    <li>Day care</li>
+                    <li>Vaccination</li>
+                    <li>Phototherepy</li>
+                    <li>Pharmacy</li>
+                    <li>Nebulisation</li>
+                    <li>Lab</li>
+                </ul>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
+    <div id="doctors" class="doctor">
+        <img src="Tarun.jpg" alt="Dr. A. Tharun Tej">
+        <div>
+            <h2>Dr. A. Tharun Tej</h2>
+            <p class="highlight">MBBS, MD (PEDS)</p>
+            <p>Consultant Pediatrician and Neonatologist. Alumni from JIPMER, Pondicherry. Completed MBBS from Kamineni institute of Medical Sciences and post-graduation in Pediatrics from Vinayaka missions. First at all India level in Pediatric Oncology Fellowship. 7 years of experience in treating Newborns and children. Worked as Consultant Oncologist at Ankura Hospitals and Assistant Professor at VRK Women’s Medical College. Expert in Newborn Resuscitation and care.</p>
+            <p>Achievements and Awards: Presented 8 papers and Posters at National and State level Conferences. Published 2 Articles in national journals.</p>
+        </div>
+    </div>
+    <div id="doctors" class="doctor">
+        <img src="Aishwarya.jpg" alt="Dr. A. Aishwarya">
+        <div>
+            <h2>Dr. A. Aishwarya</h2>
+            <p class="highlight">MBBS, MS, MCH (Peds, Surg)</p>
+            <p>Alumni of JIPMER, Pondicherry. Completed MBBS from Kamineni Institute of Medical Sciences. Finished Post graduation in General Surgery, from Government Siddhartha Medical College. First Rank in Jipmer Superspeciality entrance. Pursued Pediatric Surgery course at JIPMER, Pondicherry. Working as consultant in department of Pediatric Surgery, Esi Medical College and Superspeciality Hospital, Hyderabad.</p>
+            <p>Achievements and Awards: Received seven Awards for presentations at National level Conferences. Presented 18 papers and Posters at various National and State level Conferences.</p>
+        </div>
+    </div>
+    <div id="gallery" class="gallery">
+        <img src="Tarun.jpg" alt="Gallery Image 1">
+        <img src="AishwaryaTarun.jpg" alt="Gallery Image 2">
+    </div>
 </body>
 </html>
