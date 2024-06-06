@@ -7,7 +7,7 @@
             color: white;
             text-align: center;
             padding: 50px;
-            height: 60%;
+
         }
         .logo {
             float: left;
@@ -15,7 +15,7 @@
         }
         .contact {
             float: right;
-            font-size: small;
+            font-size: smaller; /* Make timings a bit smaller */
             display: flex;
             justify-content: space-between;
             width: 400px;
@@ -62,12 +62,14 @@
             color: #4CAF50;
         }
         .timetable {
-            width: 100%;
+            width: 50%; /* Make the table smaller */
             border-collapse: collapse;
+            margin: auto; /* Center the table */
+            font-size: 0.8em; /* Make font size smaller */
         }
         .timetable th, .timetable td {
             border: 1px solid black;
-            padding: 15px;
+            padding: 10px; /* Reduce padding */
             text-align: left;
         }
         .timetable th {
@@ -75,8 +77,17 @@
             color: white;
         }
         .services {
-            list-style-type: disc;
-            margin-left: 40px;
+            display: grid; /* Display as grid */
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Create responsive grid */
+            gap: 10px; /* Add gap between items */
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove default padding */
+        }
+        .services li {
+            background: #ddd; /* Add tiles */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center; /* Center text */
         }
         .doctor {
             clear: both;
@@ -105,21 +116,48 @@
             width: 200px;
             height: 200px;
             margin: 10px;
+		}
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Add a new style for the appointment section */
+        .appointment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: larger; /* Make the text larger */
+        }
+        .appointment img {
+            width: 24px; /* Make the mobile icon larger */
+            height: 24px;
+            margin-right: 5px;
+        }
+        .appointment a {
+            margin-right: 10px; /* Add some space between the phone numbers */
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <img class="logo" src="Amoeba.jpg" alt="Clinic Logo">
+        <img class="logo" src="C:\Users\mgummakonda\Downloads\Amoeba.jpg" alt="Clinic Logo">
         <div class="contact">
-            <p><img src="mobile.jpg" alt="Phone Icon">9392933108 </p>
-            <p><img src="gmail.jpg" alt="Email Icon"> amoebachildrensclinic@gmail.com</p>
-            <p><img src="gmail.jpg" alt="Location Icon"> <a href="https://g.co/kgs/V5ffsba">LOCATION</a></p>
+            <p><img src="mobile.png" alt="Phone Icon"> <a href="tel:PHONE_NUMBER">9392933108</a></p> 
+            <p><img src="gmail.png" alt="Email Icon"> <a href="mailto:EMAIL_ADDRESS">amoebachildrensclinic@gmail.com</a></p> 
+            <p><img src="location.png" alt="Location Icon"> <a href="https://g.co/kgs/V5ffsba" style="color: blue;">LOCATION</a></p>
+
         </div>
     </div>
     <div class="nav">
-        <a href="#mission">Mission</a>
+        <a href="#appointment">Appointment</a> 
         <a href="#doctors">Doctors</a>
+        <a href="#mission">Mission</a>
         <a href="#gallery">Gallery</a>
     </div>
     <div id="mission" class="mission">
@@ -156,8 +194,14 @@
             </div>
         </div>
     </div>
+    <div id="appointment" class="appointment">
+        <h2>For Appointment, Please Contact:</h2>
+        <p><img src="C:\Users\mgummakonda\Downloads\mobile1.png" alt="Phone Icon"> <a href="tel:PHONE_NUMBER1">9392933108</a></p> 
+        <p><img src="C:\Users\mgummakonda\Downloads\mobile1.png" alt="Phone Icon"> <a href="tel:PHONE_NUMBER2">9392944108</a></p><br><br><br><br> 
+    </div>
+    <h2>Our Doctors</h2> 
     <div id="doctors" class="doctor">
-        <img src="Tarun.jpg" alt="Dr. A. Tharun Tej">
+        <img src="C:\Users\mgummakonda\Downloads\Tarun.jpg" alt="Dr. A. Tharun Tej">
         <div>
             <h2>Dr. A. Tharun Tej</h2>
             <p class="highlight">MBBS, MD (PEDS)</p>
@@ -169,14 +213,20 @@
         <img src="Aishwarya.jpg" alt="Dr. A. Aishwarya">
         <div>
             <h2>Dr. A. Aishwarya</h2>
-            <p class="highlight">MBBS, MS, MCH (Peds, Surg)</p>
+            <p class="highlight">MBBS, MS, M.CH (Pediatrics Surgery)</p>
             <p>Alumni of JIPMER, Pondicherry. Completed MBBS from Kamineni Institute of Medical Sciences. Finished Post graduation in General Surgery, from Government Siddhartha Medical College. First Rank in Jipmer Superspeciality entrance. Pursued Pediatric Surgery course at JIPMER, Pondicherry. Working as consultant in department of Pediatric Surgery, Esi Medical College and Superspeciality Hospital, Hyderabad.</p>
             <p>Achievements and Awards: Received seven Awards for presentations at National level Conferences. Presented 18 papers and Posters at various National and State level Conferences.</p>
         </div>
+
     </div>
+	<h2>Gallery</h2>
     <div id="gallery" class="gallery">
-        <img src="Tarun.jpg" alt="Gallery Image 1">
-        <img src="Aishwarya.jpg" alt="Gallery Image 2">
+        <img src="child1.jpg" alt="Gallery Image 1">
+        <img src="child2.jpg" alt="Gallery Image 2">
+    </div>
+	    <div class="footer">
+		<h2>Amoeba Children's Clinic</h2>
+        <p>H.No. 4-101-16-1, Opp. Reliance Trends Turkayamjal Village, RangaReddy Dist. - 501 510.</p>
     </div>
 </body>
 </html>
